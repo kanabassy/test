@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>undabai</title>
+    <!-- コンパイルおよび縮小されたCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- コンパイルおよび縮小されたJavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Googleアイコンフォントをインポートする-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--materialize.cssをインポートします-->
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!--ウェブサイトがモバイル向けに最適化されていることをブラウザに知らせます-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper #ccff90 light-green accent-1">
+            <a href="#" class="brand-logo">☆UNDABAI☆</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            </ul>
+        </div>
+    </nav> <!--ここまでがヘッダー-->
+    {% block content %}
+
+    
+
+    
+
+
+    {% endblock %}
+    <!--ここからフッター-->
+    <footer class="page-footer #ccff90 light-green accent-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="text-lighten-3" href="#!">TOPへ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container"></div>
+        </div>
+    </footer>
+
+    <!--読み込みを最適化するための本文の最後にあるJavaScript-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
