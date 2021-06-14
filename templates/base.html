@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>undabai</title>
     <!-- コンパイルおよび縮小されたCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -11,8 +13,8 @@
     <!--Googleアイコンフォントをインポートする-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--materialize.cssをインポートします-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="../static/css/style.css">
 
     <!--ウェブサイトがモバイル向けに最適化されていることをブラウザに知らせます-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,40 +23,33 @@
 <body>
     <nav>
         <div class="nav-wrapper #ccff90 light-green accent-1">
-            <a href="#" class="brand-logo">UNDABAI</a>
+            <a href="#" class="brand-logo">☆UNDABAI☆</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             </ul>
         </div>
-    </nav>
+    </nav> <!--ここまでがヘッダー-->
+    {% block content %}
 
-    <div class="container">
-        <!-- ページコンテンツはここにあります -->
-        <div class="row">
-            <div class="col s12 m12">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="images/450-20180123142923354829_2.jpg">
-                        <span class="card-title">お子様の誕生おめでとうございます！こちらはお子様の成長に必要な生誕日数でのイベントカレンダーが簡単に確認できるサイトです。会員登録も不要です。お子様の成長にあわせてご活用くださいませ！</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+
+    
+
+
+    {% endblock %}
+    <!--ここからフッター-->
     <footer class="page-footer #ccff90 light-green accent-1">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">TOPへ</a></li>
+                        <li><a class="text-lighten-3" href="#!">TOPへ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container"></div>
+        </div>
     </footer>
 
     <!--読み込みを最適化するための本文の最後にあるJavaScript-->
