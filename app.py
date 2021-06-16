@@ -44,6 +44,9 @@ def top_post():
     print(int(d.year)+1)
     return render_template("kekka.html",birthday = birthday, o = o, hb = hb, hg = hg, m = m, hbd = hbd, bd = bd, sk = sk, km = km, ht=ht,go=go,na=na,jhs=jhs)
 
+@app.route('/db')
+
+
 
 
 if __name__ == '__main__':
