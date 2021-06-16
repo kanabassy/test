@@ -1,6 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-<input type="date" name="birthday" max="9999-12-31">
 
+<p>{{birthday}}に生まれたお子さまの行事一覧</p>
+
+<li>お七夜</li>
+<p>{{o.date()}}</p>
+<li>お宮参り</li>
+<p>男の子:{{hb.date()}}女の子:{{hg.date()}}</p>
+<li>百花・お食い初め</li>
+<p>{{m.date()}}</p>
+<li>ハーフバースデー</li>
+<p>{{hbd.date()}}</p>
+<li>初誕生日</li>
+<p>{{bd.date()}}</p>
+<li>初節句</li>
+<li>髪置き・七五三３歳</li>
+<p>{{km.date()}}</p>
+<li>紐解き</li>
+<p>{{ht.date()}}</p>
+<li>七五三５歳</li>
+<p>{{go.date()}}</p>
+<li>七五三７歳</li>
+<p>{{na.date()}}</p>
+<li>小学校入学</li>
+<p>{{jhs.date()}}</p>
 
 {% endblock %}
