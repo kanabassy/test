@@ -14,12 +14,12 @@ tr:nth-child(even) {
 }
 
 th[scope="col"] {
-    background-color: hsl(0, 76%, 50%);
+    background-color: hsl(0, 64%, 82%);
     color: #fff;
 }
 
 th[scope="row"] {
-    background-color: hsl(88, 83%, 84%) ;
+    background-color: hsl(87, 58%, 89%) ;
 }
 
 caption {
