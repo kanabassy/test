@@ -1,28 +1,84 @@
-{% extends "base.html" %}
-{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    
+</body>
+</html>
 
 <p>{{birthday}}に生まれたお子さまの行事一覧</p>
+<table>
+    <caption></caption>
+    <tr>
+        <th scope="col">祝い事</th>
+        <th scope="col">日時</th>
+        
+    </tr>
+    <tr>
+        <th scope="row">お七夜</th>
+        <td>{{o.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">お宮参り</th>
+        <td>男の子:{{hb.date()}}女の子:{{hg.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">百日・お食い初め</th>
+        <td>{{m.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">ハーフバースデー</th>
+        <td>{{hbd.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">初誕生日</th>
+        <td>{{bd.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">初節句</th>
+        <td></td>
+        
+    </tr>
+    <tr>
+        <th scope="row">髪置き・七五三３歳</th>
+        <td>{{km.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">紐解き</th>
+        <td>{{ht.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">七五三5歳</th>
+        <td>{{go.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">七五三7歳</th>
+        <td>{{na.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">小学校入学</th>
+        <td>{{jhs.date()}}</td>
+        
+    </tr>
+</table>
 
-<li>お七夜</li>
-<p>{{o.date()}}</p>
-<li>お宮参り</li>
-<p>男の子:{{hb.date()}}女の子:{{hg.date()}}</p>
-<li>百花・お食い初め</li>
-<p>{{m.date()}}</p>
-<li>ハーフバースデー</li>
-<p>{{hbd.date()}}</p>
-<li>初誕生日</li>
-<p>{{bd.date()}}</p>
-<li>初節句</li>
-<li>髪置き・七五三３歳</li>
-<p>{{km.date()}}</p>
-<li>紐解き</li>
-<p>{{ht.date()}}</p>
-<li>七五三５歳</li>
-<p>{{go.date()}}</p>
-<li>七五三７歳</li>
-<p>{{na.date()}}</p>
-<li>小学校入学</li>
-<p>{{jhs.date()}}</p>
 
-{% endblock %}
+
+
