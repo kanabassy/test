@@ -62,14 +62,14 @@ tr:nth-child(even) {
 }
 
 th[scope="col"] {
-    background-color: hsl(202, 55%, 49%);
+    background-color:#b1edf7;
 
     color: #fff;
 }
 
 th[scope="row"] {
-    background-color: hsl(88, 83%, 84%) ;
-    background-color: hsl(87, 58%, 89%) ;
+    background-color: rgb(207, 247, 250) ;
+    
 }
 
 caption {
@@ -93,11 +93,17 @@ div   {text-align:center;}
 
 
 header {
-	height: 60px;
-	background: #eeeaec;
+	height: 80px;
+	background:#ccff90;
 	text-align: center;
 	position: fixed;
 	width: 100%;
+}
+header h1 {
+    color:#fff;
+    font-size: 60px;
+    
+
 }
 header ul {
 	width: 900px;
@@ -105,7 +111,7 @@ header ul {
 	display: flex;
 }
 header li {
-	color: #acacac;
+	color:hsl(90, 75%, 3%);
 	/* 課題1解答 ----------------------------------- */
 	width: 20%;
 	line-height: 60px;
@@ -131,7 +137,7 @@ section h1 {
 }
 footer {
 	height: 80px;
-	background: #eeeaec;
+	background: #ccff90;
 	width: 100%;
 }
 
@@ -172,5 +178,5 @@ footer .copyright {
 	font-size: 18px;
 }
 
-}
+
 
