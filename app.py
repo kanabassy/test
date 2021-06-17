@@ -8,9 +8,9 @@ app = Flask(__name__)
 def index():
     return render_template("toptop.html")
 
-
-@app.route('/dbtest')
-def dbtest():
+'''
+@app.route('/db')
+def db():
     conn = sqlite3.connect('event.db')
     c = conn.cursor()
     c.execute("select event_name,image,memo from event where id = 2")
@@ -18,7 +18,7 @@ def dbtest():
     c.close
     print(event_info)
     return render_template("db.html",event_info = event_info)
-
+'''
 
 
 @app.route('/toptop',methods=["GET"])
@@ -35,14 +35,32 @@ def top_post():
     m = d + timedelta(days=100)
     hbd = d + relativedelta(months=6)
     bd = d + relativedelta(years=1)
-    sk = int(d.year)
+    sk = int(d.year) + 1
     km = int(d.year) + 2
     ht = int(d.year) + 3
     go = int(d.year) + 4
     na = int(d.year) + 6
     jhs = int(d.year) + 7
-    print(int(d.year)+1)
     return render_template("kekka.html",birthday = birthday, o = o, hb = hb, hg = hg, m = m, hbd = hbd, bd = bd, sk = sk, km = km, ht=ht,go=go,na=na,jhs=jhs)
+
+''''
+@app.route('/db',methods=["GET"])
+def db_get():
+    return render_template("db.html")
+
+@app.route('/db',methods=["POST"])
+def db_post():
+
+    conn = sqlite3.connect('event.db')
+    c = conn.cursor()
+    c.execute("select event_name,image,memo from event where id = ?")
+    event_info = c.fetchone()
+    for row in c.fechall():
+        event_info.append(("id":row[o],"event_name":row[1]))
+    print(event_info)
+    return render_template("db.html",event_info = event_info)
+'''
+
 
 
 
