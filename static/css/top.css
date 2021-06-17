@@ -8,3 +8,28 @@
     padding: 30px;
     margin: 30px;
 }
+
+@media screen and ( max-width:479px ) {
+    html {
+        font-size: 13px;
+    }
+}
+
+div class {
+    max-width: 100%;
+}
+
+p {
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+form {
+    text-align: left;
+}
+
+
+.block {
+    text-align: left;
+}
+
