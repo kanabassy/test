@@ -1,8 +1,93 @@
-{% extends "base.html" %}
-{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    
+</body>
+</html>
 
 <p>{{birthday}}に生まれたお子さまの行事一覧</p>
+<table>
+    <caption></caption>
+    <tr>
+        <th scope="col">祝い事</th>
+        <th scope="col">日時</th>
+        
+    </tr>
+    <tr>
+        <th scope="row">お七夜</th>
+        <td>{{o.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">お宮参り</th>
+        <td>男の子:{{hb.date()}}女の子:{{hg.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">百日・お食い初め</th>
+        <td>{{m.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">ハーフバースデー</th>
+        <td>{{hbd.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">初誕生日</th>
+        <td>{{bd.date()}}</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">初節句</th>
+        <td>男の子:{{sk}}-5-5</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">初節句</th>
+        <td>女の子:{{sk}}-3-3</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">髪置き・七五三３歳</th>
+        <td>{{km}}-11-15</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">紐解き</th>
+        <td>{{ht}}-11-15</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">七五三5歳</th>
+        <td>{{go}}-11-15</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">七五三7歳</th>
+        <td>{{na}}-11-15</td>
+        
+    </tr>
+    <tr>
+        <th scope="row">小学校入学</th>
+        <td>{{jhs}}-4-1</td>
+        
+    </tr>
+</table>
 
+
+
+<<<<<<< HEAD
+=======
 <li>お七夜</li>
 <p>{{o.date()}}</p>
 <li>お宮参り</li>
@@ -26,5 +111,5 @@
 <p>{{na}}-11-15</p>
 <li>小学校入学</li>
 <p>{{jhs}}-4-1</p>
+>>>>>>> d97155837068efcdd5fe6f3dba8629e7c3fc18dd
 
-{% endblock %}
