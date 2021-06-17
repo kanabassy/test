@@ -1,3 +1,53 @@
+@charset "UTF-8";
+
+html {
+	overflow-y: scroll;
+	/* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+
+
 
 td,
 th {
@@ -12,8 +62,8 @@ tr:nth-child(even) {
 }
 
 th[scope="col"] {
-    background-color: hsl(0, 76%, 50%);
-    background-color: hsl(0, 64%, 82%);
+    background-color: hsl(202, 55%, 49%);
+
     color: #fff;
 }
 
@@ -32,4 +82,95 @@ table {
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
+
+    margin-left:auto;margin-right:auto;margin-top: auto;
 }
+div   {text-align:center;}
+
+
+
+
+
+
+header {
+	height: 60px;
+	background: #eeeaec;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+}
+header ul {
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+}
+header li {
+	color: #acacac;
+	/* 課題1解答 ----------------------------------- */
+	width: 20%;
+	line-height: 60px;
+	transition: 0.2s;  /*メニューをホバーした時の変化時間*/
+}
+
+header li:hover{
+	/*メニューをホバーしたときに色が変わる*/
+	color:#111;
+}
+section {
+	text-align: center;
+	padding: 100px 0;
+}
+
+section h1 {
+	font-size: 40px;
+	line-height: 50px;
+	
+	font-weight: 200;
+    margin-bottom: 0;
+    
+}
+footer {
+	height: 80px;
+	background: #eeeaec;
+	width: 100%;
+}
+
+footer .copyright {
+	color: #acacac;
+	font-size: 12px;
+	padding-top: 30px;
+	letter-spacing: 1px;
+}
+
+
+#sec4 p {
+	font-size: 15px;
+	line-height: 2;
+	margin-bottom: 15px;
+    
+}
+
+#sec4 .port .portfolio {
+	width: 90%;
+	margin: 40px auto;
+	text-align: left;
+	display: flex;
+}
+
+#sec4 .port .portfolio img {
+	width: 100%;
+}
+
+#sec4 .port .portfolio p {
+	font-size: 14px;
+	margin-top: 64px;
+    margin-left: 30px;
+}
+
+#sec4 .port .portfolio p.port_title {
+	text-align: center;
+	font-size: 18px;
+}
+
+}
+
