@@ -1,30 +1,211 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="ja">
 
-<p>{{birthday}}に生まれたお子さまの行事一覧</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
 
-<li>お七夜</li>
-<p>{{o.date()}}</p>
-<li>お宮参り</li>
-<p>男の子:{{hb.date()}}女の子:{{hg.date()}}</p>
-<li>百花・お食い初め</li>
-<p>{{m.date()}}</p>
-<li>ハーフバースデー</li>
-<p>{{hbd.date()}}</p>
-<li>初誕生日</li>
-<p>{{bd.date()}}</p>
-<li>初節句</li>
-<p>男の子:{{tsk}}-5-5</p>
-<p>女の子:{{msk}}-3-3</p>
-<li>髪置き・七五三３歳</li>
-<p>{{km}}-11-15</p>
-<li>紐解き</li>
-<p>{{ht}}-11-15</p>
-<li>七五三５歳</li>
-<p>{{go}}-11-15</p>
-<li>七五三７歳</li>
-<p>{{na}}-11-15</p>
-<li>小学校入学</li>
-<p>{{jhs}}-4-1</p>
+<body>
+    <header>
+        <h1>UNDABAI</h1>
 
-{% endblock %}
+
+    
+    </header>
+
+
+    <section id="sec1">
+        <h1>{{birthday}}<br>に生まれた赤ちゃんの行事一覧</h1>
+    </section>
+    <div>
+        <table>
+            <caption></caption>
+            <tr>
+                <th scope="col">祝い事</th>
+                <th scope="col">日時</th>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#abc">お七夜</a></th>
+                <td>{{o.date()}}</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#def">お宮参り</a></th>
+                <td>男の子:{{hb.date()}}女の子:{{hg.date()}}</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#ghi">百日・お食い初め</a></th>
+                <td>{{m.date()}}</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#jkl">ハーフバースデー</a></th>
+                <td>{{hbd.date()}}</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#mno">初誕生日</a></th>
+                <td>{{bd.date()}}</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#pqr">初節句</a></th>
+                <td>男の子:{{sk}}-5-5</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#pqr">初節句</a></th>
+                <td>女の子:{{sk}}-3-3</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#vwx">髪置き・七五三３歳</a></th>
+                <td>{{km}}-11-15</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#yza">紐解き</a></th>
+                <td>{{ht}}-11-15</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#vwx">七五三5歳</a></th>
+                <td>{{go}}-11-15</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#vwx">七五三7歳</a></th>
+                <td>{{na}}-11-15</td>
+
+            </tr>
+            <tr>
+                <th scope="row"><a href="#hij">小学校入学</a></th>
+                <td>{{jhs}}-4-1</td>
+
+            </tr>
+        </table>
+    </div>
+    <section id="sec4">
+        <div class="box port">
+            <h1 id="abc">お祝い事</h1>
+            <p>全国にはこどもの成長を祝ういろいろな催しがあります。<br>
+                こちらでは熊本ならではの風習も含め、お祝い事をご紹介します。
+            </p>
+
+            <div class="portfolio">
+                <a href="#"><img src="../static/images/oshichiya.jpg" alt="あいうえお">
+                    <p id="def" class="port_title">お七夜</p>
+                </a>
+                <p >
+                    
+                    お七夜は誕生後七日目のお祝いです。熊本の場合、名付けはサンガニチ（三日目）にやることが多かったようです。
+                    サンガニチの祝いは「カミタテ」「テヌキ祝い」などとも呼ばれ、小豆ご飯を炊いて祝いました。
+                    このご飯を「カミタテメシ」といい、赤ちゃんの枕に入れた小豆を少し出して炊き、茶碗に高く盛って神棚にお供えしたといいます。
+
+                </p>
+            </div>
+
+            <div class="portfolio flex_reverse">
+                <p>お宮参りは、赤ちゃんが生まれて初めて神社にお参りすることを言います。熊本では「日明き」と言い、同じ県内でも地域によって
+                    異なりますが、だいたい男児の場合は生後三十一日で、女児は三十一日か三十二日というところが多いようです。
+
+                </p>
+                <a href="#"><img src="../static/images/omiya.jpg" alt="かきくけこ">
+                    <p id="ghi" class="port_title">お宮参り</p>
+                </a>
+            </div>
+
+            <div class="portfolio">
+                <a href="#"><img src="../static/images/okui.jpg" alt="さしすせそ">
+                    <p id="jkl" class="port_title">お食い初め</p>
+                </a>
+                <p>生後、百日目に身内が集まって赤ちゃんにご飯を食べさせるまねごとをして、成長を喜ぶのが”お食い初め”です。
+                    熊本では百日（ももか）の祝いとは言いながら、百十日目（八代）、百二十日目（鹿本・下益城）、と地域によって祝う日もまちまちのようです。
+
+                </p>
+            </div>
+            <div class="portfolio flex_reverse">
+                <p>ハーフバースデーは欧米の風習が由来となっています。学校の長期休み中に誕生日を迎える子はお友達にお祝いしてもらえないので、誕生日の半年前もしくは半年後にお祝いをしようという習慣があります。
+                    それが日本では生後半年を迎えた赤ちゃんの成長をお祝いしようという独自の意味で広がり、徐々に定着していったようです。
+
+                </p>
+                <a href="#"><img src="../static/images/halfbd.jpeg" alt="かきくけこ">
+                    <p id="mno" class="port_title">ハーフバースデー</p>
+                </a>
+            </div>
+            <div class="portfolio">
+                <a href="#"><img src="../static/images/1st_b.d.png" alt="あいうえお">
+                    <p id="pqr" class="port_title">初誕生日</p>
+                </a>
+                <p>日本では死者の命日は重視しますが、個人の誕生日を祝う習慣はありませんでありませんでした。
+                    しかし、初誕生日だけは、餅をつき赤飯を炊き、親戚を招いて無事に人生の最初の一年を送ることが出来た我が子を祝いました。
+                    そして、歩き始めた子には、一升の米や餅を背負わせる「かわらせ餅」をします。
+                    これはどこの地方でも見られる風習です。
+                
+
+                </p>
+            </div>
+
+            <div class="portfolio flex_reverse">
+                <p>赤ちゃんが初めて迎える節句が「初節句」です。男の子は五月五日の端午の節句、女の子なら三月三日の桃の節句に
+                    身近な人たちを招いてお祝いをします。しかし生後まもなく初節句を迎えるような場合は、翌年にまわしても構いません。
+
+                </p>
+                <a href="#"><img src="../static/images/hatsuzekku_boy.png" alt="かきくけこ">
+                    <p id="vwx" class="port_title">初節句</p>
+                </a>
+            </div>
+
+            <div class="portfolio">
+                <a href="#"><img src="../static/images/sitigosann.png" alt="さしすせそ">
+                    <p id="yza" class="port_title">七五三</p>
+                </a>
+                <p>昔は男女ともに三歳になると「髪置」と言って髪を伸ばし始め、男児は五歳になると「袴着の祝い」
+                    をして男の衣装をつけ、女児は七歳で「帯祝い」をして付け紐を取って帯を締めました。
+                    七五三は武家社会の中から起こった風習で、子どもの成長と健康、厄除けなどを祈ってお祝いする行事です。
+                    熊本では、昔から男女児とも数え年の三つで「髪置き」、四つで「紐解き」のお祝いをするところが多いようです。
+
+                </p>
+            </div>
+            <div class="portfolio flex_reverse">
+                <p>子どもが着物の付け紐をとり，はじめて帯を結ぶ儀式です。
+                    幼児から子どもへの通過儀礼として多く行われ，帯を結ぶことで新しい成長段階に達したことを表しています。
+                    熊本では男女児とも数え年の四つで行います。理由は定かではありませんが、子どもの死亡率の高かった昔において、早めに祝ってあげたいという、親心の現れではないかとも言われています。
+
+                </p>
+                <a href="#"><img src="../static/images/himotoki.jpg" alt="かきくけこ">
+                    <p id="hij" class="port_title">紐解き</p>
+                </a>
+            </div>
+
+            <div class="portfolio">
+                <a href="#"><img src="../static/images/nyuugaku.jpg" alt="さしすせそ">
+                    <p id="bcd" class="port_title">小学校入学</p>
+                </a>
+                <p>新しい学校に入り人生の新しいステージに立つ新入生にとって、入学式は人生の新しい区切りを意味します。
+                    真新しい制服を着た生徒達が新しい年度の始まりに学校に向かう姿は、桜の花とともに春の風物となっています。
+
+                </p>
+            </div>
+            <a href="./top.html">トップページへ戻る</a>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <p class="copyright">Copyright © DEMO all rights reserved.</p>
+    </footer>
+</body>
+
+</html>
