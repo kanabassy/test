@@ -8,17 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template("top.html")
 
-'''
-@app.route('/db')
-def db():
-    conn = sqlite3.connect('event.db')
-    c = conn.cursor()
-    c.execute("select event_name,image,memo from event where id = 2")
-    event_info = c.fetchone()
-    c.close
-    print(event_info)
-    return render_template("db.html",event_info = event_info)
-'''
+
 
 
 @app.route('/toptop',methods=["GET"])
@@ -35,31 +25,51 @@ def top_post():
     m = d + timedelta(days=100)
     hbd = d + relativedelta(months=6)
     bd = d + relativedelta(years=1)
-    sk = int(d.year) + 1
+
+    targets = [datetime.strptime(birthday, "%Y-%m-%d")]
+    from_dt = datetime(2021, 1, 1)
+    to_dt = datetime(2021, 1, 31)
+
+    for target in targets:
+      if from_dt <= target <= to_dt: # 1/31より小さく1/1よりも大きい 1/1から1/31のあいだ
+        print(target)
+        msk = int(d.year)
+      else:
+        print(d)
+        msk = int(d.year) + 1
+
+    targets = [datetime.strptime(birthday, "%Y-%m-%d")]
+    from_dt = datetime(2021, 1, 1)
+    to_dt = datetime(2021, 4, 5)
+
+    for target in targets:
+      if from_dt <= target <= to_dt: # 4/5より小さく1/1よりも大きい 1/1から4/5のあいだ
+        print(target)
+        tsk = int(d.year)
+      else:
+        print(d)
+        tsk = int(d.year) + 1
+
     km = int(d.year) + 2
     ht = int(d.year) + 3
     go = int(d.year) + 4
     na = int(d.year) + 6
-    jhs = int(d.year) + 7
-    return render_template("kekka.html",birthday = birthday, o = o, hb = hb, hg = hg, m = m, hbd = hbd, bd = bd, sk = sk, km = km, ht=ht,go=go,na=na,jhs=jhs)
 
-''''
-@app.route('/db',methods=["GET"])
-def db_get():
-    return render_template("db.html")
 
-@app.route('/db',methods=["POST"])
-def db_post():
+    targets = [datetime.strptime(birthday, "%Y-%m-%d")]
+    from_dt = datetime(2021, 1, 1)
+    to_dt = datetime(2021, 4, 2)
 
-    conn = sqlite3.connect('event.db')
-    c = conn.cursor()
-    c.execute("select event_name,image,memo from event where id = ?")
-    event_info = c.fetchone()
-    for row in c.fechall():
-        event_info.append(("id":row[o],"event_name":row[1]))
-    print(event_info)
-    return render_template("db.html",event_info = event_info)
-'''
+    for target in targets:
+      if from_dt <= target <= to_dt: # 4/2より小さく1/1よりも大きい 1/1から4/2のあいだ
+        print(target)
+        jhs = int(d.year) + 6
+      else:
+        print(d)
+        jhs = int(d.year) + 7
+
+    return render_template("kekka.html",birthday = birthday, o = o, hb = hb, hg = hg, m = m, hbd = hbd, bd = bd, msk = msk, tsk = tsk, km = km, ht=ht,go=go,na=na,jhs=jhs)
+
 
 
 
