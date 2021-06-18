@@ -9,13 +9,7 @@ def index():
     return render_template("top.html")
 
 
-
-
-@app.route('/toptop',methods=["GET"])
-def top_get():
-    return render_template("toptop.html")
-
-@app.route('/toptop',methods=["POST"])
+@app.route('/top',methods=["POST"])
 def top_post():
     birthday = request.form.get('birthday')
     d = datetime.strptime(birthday, "%Y-%m-%d")
@@ -55,7 +49,6 @@ def top_post():
     go = int(d.year) + 4
     na = int(d.year) + 6
 
-
     targets = [datetime.strptime(birthday, "%Y-%m-%d")]
     from_dt = datetime(2021, 1, 1)
     to_dt = datetime(2021, 4, 2)
@@ -69,8 +62,6 @@ def top_post():
         jhs = int(d.year) + 7
 
     return render_template("kekka.html",birthday = birthday, o = o, hb = hb, hg = hg, m = m, hbd = hbd, bd = bd, msk = msk, tsk = tsk, km = km, ht=ht,go=go,na=na,jhs=jhs)
-
-
 
 
 
